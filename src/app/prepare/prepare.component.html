@@ -1,6 +1,8 @@
 <nav class="navbar navbar-expand-lg navbar-dark sticky-top" style="background-color:rgba(201, 134, 134, .9);">
-  <a class="navbar-brand" href="#" style="color:#f4e9cd;">READY RELIEF</a>
-    <!-- <img src="assets/img/ReadyRelief.png" width="50px"> -->
+  <a class="navbar-brand" href="#" style="color:#f4e9cd;">
+     <img src="assets/img/ReadyRelief.png" width="30" height="30" class="d-inline-block align-top" alt="">
+     ReadyRelief
+   </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -8,7 +10,7 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav ml-auto">
       <li class="nav-item active">
-        <a class="nav-link" routerLink="/home"><i class="fa fa-home"></i> Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link" routerLink="/prepare"><i class="fa fa-home"></i> Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item active">
         <a class="nav-link" target="_blank" href="#logout" data-toggle = "modal" data-target= "#logout" data-backdrop="static" data-keyboard="false"><i class="fa fa-sign-out"></i> Logout</a>
@@ -34,35 +36,43 @@
 </div>
 
 <div class="container">
-  <div class="jumbotron" style="margin-top:20px;">
-
+  <div class="jumbotron" style="margin-top:20px;background-color:#5c9ead;text-align:center;">
+    <h1>Prepare
+      <button class="btn btn-lg" type="button" data-toggle="collapse" aria-expanded="false" aria-hidden="true" routerLink="/relief">
+          <i class="fa fa-3x fa-toggle-off"></i>
+      </button>
+    </h1>
+    <button class="btn btn-secondary" routerLink="/update">Update Details</button>&nbsp;
+    <button class="btn btn-primary" routerLink="/post"><i class="fa fa-lg fa-plus-circle"></i> New Post</button>
   </div>
   <div class="row">
     <div class="col-9">
       <div class="card">
+        <img class="card-img-top" src="assets/img/shutters.jpg" alt="Windows sans shutters">
         <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <h5 class="card-title">Assistance with Shutters</h5>
+          <h6 class="card-subtitle mb-2 text-muted">Posted by <b>MomOf2</b> on <b>September 21, 2019 at 4:39 PM</b></h6>
+          <p class="card-text">I need help putting up my hurricane shutters in Miami, Florida. Thank you for this community!</p>
         </div>
         <div class="card-footer">
-          #food #water
+          #shutters #hurricane
         </div>
       </div>
       <br>
       <div class="card">
         <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <h5 class="card-title">Trading Water for Gas</h5>
+          <h6 class="card-subtitle mb-2 text-muted">Posted by <b>billybob1985</b> on <b>September 20, 2019 at 1:12 PM</b></h6>
+          <p class="card-text">My nearest gas station ran out of gas today. Could I trade someone 2 bottled water packs for a full tank of gas? Thanks a lot!</p>
         </div>
         <div class="card-footer">
-          #food #water
+          #gas
         </div>
       </div>
+      <br>
     </div>
-    <div class="col-3">
-      hi
+    <div class="col-3" style="background-color:#f4e9cd;">
+      <h3 style="text-align:center; text-decoration:underline;">Resources</h3>
     </div>
   </div>
 </div>

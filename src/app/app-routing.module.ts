@@ -6,6 +6,7 @@ import { LoginComponent } from './login/login.component';
 import { UpdateComponent } from './update/update.component';
 import { PrepareComponent } from './prepare/prepare.component';
 import { ReliefComponent } from './relief/relief.component';
+import { PostComponent } from './post/post.component';
 
 const routes: Routes = [
   {path: '', component: HomepageComponent},
@@ -15,6 +16,7 @@ const routes: Routes = [
   {path: 'update', component: UpdateComponent},
   {path: 'prepare', component: PrepareComponent},
   {path: 'relief', component: ReliefComponent},
+  {path: 'post', component: PostComponent},
   {path: '**', redirectTo: '/'}
 ];
 

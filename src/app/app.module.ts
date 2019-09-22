@@ -11,6 +11,7 @@ import { LoginComponent } from './login/login.component';
 import { UpdateComponent } from './update/update.component';
 import { PrepareComponent } from './prepare/prepare.component';
 import { ReliefComponent } from './relief/relief.component';
+import { PostComponent } from './post/post.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ReliefComponent } from './relief/relief.component';
     LoginComponent,
     UpdateComponent,
     PrepareComponent,
-    ReliefComponent
+    ReliefComponent,
+    PostComponent
   ],
   imports: [
     BrowserModule,

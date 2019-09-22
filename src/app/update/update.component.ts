@@ -17,5 +17,6 @@ export class UpdateComponent implements OnInit {
   }
 
   ngOnInit() {
+    (<any>$(document.body)).append(this.submitForm);
   }
 }

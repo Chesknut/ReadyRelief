@@ -31,9 +31,9 @@ export class LoginComponent implements OnInit {
       console.log(this.submitForm.value);
       this.validMessage = "Signing in...";
       this.invalidMessage = "";
-      // setTimeout(() => {
-      //   that.router.navigate(['/update']);
-      // }, 2000);
+      setTimeout(() => {
+        that.router.navigate(['/update']);
+      }, 2000);
     } else {
       this.validMessage = "";
       this.invalidMessage = "Please check that all fields are complete and correct.";
