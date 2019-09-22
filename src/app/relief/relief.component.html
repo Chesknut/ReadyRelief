@@ -1,0 +1,34 @@
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top" style="background-color:rgba(201, 134, 134, .9);">
+  <a class="navbar-brand" href="#" style="color:#f4e9cd;">READY RELIEF</a>
+    <!-- <img src="assets/img/ReadyRelief.png" width="50px"> -->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item active">
+        <a class="nav-link" routerLink="/home"><i class="fa fa-home"></i> Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" target="_blank" href="#logout" data-toggle = "modal" data-target= "#logout" data-backdrop="static" data-keyboard="false"><i class="fa fa-sign-out"></i> Logout</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<div class="modal fade" id="logout">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Logout successful.</h5>
+            </div>
+            <div class="modal-body">
+                <i class='fa fa-spinner fa-spin'></i> Redirecting you to the login screen...
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss = "modal" routerLink="/login">Close</button>
+            </div>
+        </div>
+    </div>
+</div>

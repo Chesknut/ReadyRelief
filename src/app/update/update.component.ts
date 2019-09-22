@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-update',
@@ -6,10 +8,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./update.component.css']
 })
 export class UpdateComponent implements OnInit {
+  submitForm: FormGroup;
 
-  constructor() { }
+  constructor(private router: Router) {
+    this.submitForm = new FormGroup({
+      disaster: new FormControl('', Validators.required)
+    });
+  }
 
   ngOnInit() {
   }
-
 }
