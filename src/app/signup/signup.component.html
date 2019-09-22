@@ -1,0 +1,67 @@
+<div class="container">
+  <br>
+  <div class="jumbotron" style="padding-top:50px; background-image: url(assets/img/walker.jpg); background-size: cover; background-repeat: no-repeat; background-position: center center;">
+    <div class="card">
+      <div class="card-body">
+        <form>
+          <h3 style="text-align:center;">Sign Up</h3>
+          <div class="row">
+            <div class="col-6">
+              <div class="form-group">
+                <label>First Name<span class="require" title="This field is required.">*</span></label>
+                <input type="text" class="form-control" formControlName="firstname" required autofocus/>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="form-group">
+                <label>Last Name<span class="require" title="This field is required.">*</span></label>
+                <input type="text" class="form-control" formControlName="lastname" required autofocus/>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Email<span class="require" title="This field is required.">*</span></label>
+            <input type="email" class="form-control" formControlName="email" required autofocus/>
+          </div>
+          <div class="form-group">
+            <label>Street Address<span class="require" title="This field is required.">*</span></label>
+            <input type="text" class="form-control" formControlName="street" required autofocus/>
+          </div>
+          <div class="row">
+            <div class="col-6">
+              <div class="form-group">
+                <label>City<span class="require" title="This field is required.">*</span></label>
+                <input type="text" class="form-control" formControlName="city" required autofocus/>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="form-group">
+                <label>State<span class="require" title="This field is required.">*</span></label>
+                <input type="text" class="form-control" formControlName="state" required autofocus/>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Country<span class="require" title="This field is required.">*</span></label>
+            <input type="text" class="form-control" formControlName="country" required autofocus/>
+          </div>
+          <div class="form-group">
+            <label>Password<span class="require" title="This field is required.">*</span></label>
+            <input type="password" class="form-control" formControlName="password" required autofocus/>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">Create Account</button>
+          <!-- <div *ngIf="validMessage != ''">
+            <br>
+            <h5 class="has-info"><i class='fa fa-check'></i> {{validMessage}}</h5>
+          </div>
+          <div *ngIf="invalidMessage != ''">
+            <br>
+            <h5 class="has-info"><i class='fa fa-exclamation-triangle'></i> {{invalidMessage}}</h5>
+          </div> -->
+        </form>
+        <br><br>
+        <div class="text-center">Already have an account? <a routerLink="/login" style="text-decoration:underline;cursor:pointer;color:#966b9d;">Log In</a></div>
+      </div>
+    </div>
+  </div>
+</div>

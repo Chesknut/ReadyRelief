@@ -1,0 +1,30 @@
+<div class="container">
+  <br>
+  <div class="jumbotron" style="padding-top:50px; background-color:#f4e9cd">
+    <div class="card">
+      <div class="card-body">
+        <form>
+          <!-- <h3 style="text-align:center;">Assistance Details</h3> -->
+          <div class="form-group">
+            <label>What disaster are you going through right now?</label>
+            <input type="text" class="form-control" formControlName="disaster" required autofocus/>
+          </div>
+          <br>
+          <!-- <div *ngIf="validMessage != ''">
+            <br>
+            <h5 class="has-info"><i class='fa fa-check'></i> {{validMessage}}</h5>
+          </div>
+          <div *ngIf="invalidMessage != ''">
+            <br>
+            <h5 class="has-info"><i class='fa fa-exclamation-triangle'></i> {{invalidMessage}}</h5>
+          </div> -->
+          <div style="text-align:center;">
+            <h3>How can we help?</h3>
+            <button type="submit" class="btn btn-primary btn-lg prepare" style="display: inline-block;">PREPARE</button>&nbsp;
+            <button type="submit" class="btn btn-primary btn-lg relief">RELIEF</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,31 @@
+<div class="container">
+  <br>
+  <div class="jumbotron" style="padding-top:50px; background-image: url(assets/img/sandbags.jpg); background-size: cover; background-repeat: no-repeat; background-position: center center;">
+    <div class="card">
+      <div class="card-body">
+        <form>
+          <h3 style="text-align:center;">Log In</h3>
+          <div class="form-group">
+            <label>Email<span class="require" title="This field is required.">*</span></label>
+            <input type="email" class="form-control" formControlName="email" required autofocus/>
+          </div>
+          <div class="form-group">
+            <label>Password<span class="require" title="This field is required.">*</span></label>
+            <input type="password" class="form-control" formControlName="password" required autofocus/>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">Log In</button>
+          <!-- <div *ngIf="validMessage != ''">
+            <br>
+            <h5 class="has-info"><i class='fa fa-check'></i> {{validMessage}}</h5>
+          </div>
+          <div *ngIf="invalidMessage != ''">
+            <br>
+            <h5 class="has-info"><i class='fa fa-exclamation-triangle'></i> {{invalidMessage}}</h5>
+          </div> -->
+        </form>
+        <br><br>
+        <div class="text-center">Need an account? <a routerLink="/signup" style="text-decoration:underline;cursor:pointer;color:#966b9d;">Sign Up</a></div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,2 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
 @import '~bootstrap/dist/css/bootstrap.min.css';
+
+.btn-primary {
+  background-color: #c98686;
+  border-color: transparent;
+}
+
+.prepare {
+  background-color: #5c9ead;
+}
+
+.prepare:hover {
+  background-color: #5c9ead;
+}
+
+.relief {
+  background-color: #91c499;
+}
+
+.relief:hover {
+  background-color: #91c499;
+}
