@@ -270,8 +270,31 @@
       "x-deprecated": true
     },
     "index": {
-      "type": "string",
-      "description": "The name of the index HTML file."
+      "description": "Configures the generation of the application's HTML index.",
+      "oneOf": [
+        {
+          "type": "string",
+          "description": "The path of a file to use for the application's HTML index. The filename of the specified path will be used for the generated file and will be created in the root of the application's configured output path."
+        },
+        {
+          "type": "object",
+          "description": "",
+          "properties": {
+            "input": {
+              "type": "string",
+              "minLength": 1,
+              "description": "The path of a file to use for the application's generated HTML index."
+            },
+            "output": {
+              "type": "string",
+              "minLength": 1,
+              "default": "index.html",
+              "description": "The output path of the application's generated HTML index file. The full provided path will be used and will be considered relative to the application's configured output path."
+            }
+          },
+          "required": ["input"]
+        }
+      ]
     },
     "statsJson": {
       "type": "boolean",
@@ -319,6 +342,16 @@
     "webWorkerTsConfig": {
       "type": "string",
       "description": "TypeScript configuration for Web Worker modules."
+    },
+    "crossOrigin": {
+      "type": "string",
+      "description": "Define the crossorigin attribute setting of elements that provide CORS support.",
+      "default": "none",
+      "enum": [
+        "none",
+        "anonymous",
+        "use-credentials"
+      ]
     }
   },
   "additionalProperties": false,
@@ -418,7 +451,13 @@
             "lazy": {
               "type": "boolean",
               "description": "If the bundle will be lazy loaded.",
-              "default": false
+              "default": false,
+              "x-deprecated": "Use 'inject' option with 'false' value instead."
+            },
+            "inject": {
+              "type": "boolean",
+              "description": "If the bundle will be referenced in the HTML file.",
+              "default": true
             }
           },
           "additionalProperties": false,
@@ -443,6 +482,7 @@
             "allScript",
             "any",
             "anyScript",
+            "anyComponentStyle",
             "bundle",
             "initial"
           ]
