@@ -1,0 +1,79 @@
+<!-- Original login component html -->
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top" style="background-color:rgba(201, 134, 134, .9);">
+  <a class="navbar-brand" href="#" style="color:#f4e9cd;">
+     <img src="assets/img/ReadyRelief.png" width="30" height="30" class="d-inline-block align-top" alt="">
+     ReadyRelief
+   </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item active">
+        <a class="nav-link" routerLink="/home"><i class="fa fa-home"></i> Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" routerLink="/signup"><i class="fa fa-user-circle"></i> Sign Up</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" routerLink="/login"><i class="fa fa-sign-in"></i> Log In</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+
+<!-- Original sign-in component html -->
+<div class="container">
+  <br>
+  <div class="jumbotron" style="padding-top:50px; background-image: url(assets/img/sandbags.jpg); background-size: cover; background-repeat: no-repeat; background-position: center center;">
+<div class="displayTable">
+  <div class="displayTableCell">
+
+    <div class="card">
+    <div class="card-body">
+
+    <div class="authBlock">
+      <h3>Sign In</h3>
+      <div class="formGroup">
+        <input type="text" class="formControl" placeholder="Username" #userName required>
+      </div>
+
+      <div class="formGroup">
+        <input type="password" class="formControl" placeholder="Password" #userPassword required>
+      </div>
+
+      <!-- Calling SignIn Api from AuthService -->
+      <div class="formGroup">
+        <input type="button" class="btn btnPrimary" value="Log in" (click)="authService.SignIn(userName.value, userPassword.value)">
+      </div>
+
+      <div class="formGroup">
+        <span class="or"><span class="orInner">Or</span></span>
+      </div>
+
+      <!-- Calling GoogleAuth Api from AuthService -->
+      <div class="formGroup">
+        <button type="button" class="btn googleBtn" (click)="authService.GoogleAuth()">
+          <i class="fab fa-google-plus-g"></i>
+          Log in with Google
+        </button>
+      </div>
+
+      <div class="forgotPassword">
+        <span routerLink="/forgot-password">Forgot Password?</span>
+      </div>
+    </div>
+
+    <div class="redirectToLogin">
+      <span>Don't have an account?<span class="redirect" routerLink="/register-user"> Sign Up</span></span>
+    </div>
+
+  </div>
+</div>
+
+    </div>
+  </div>
+</div>
+</div>
