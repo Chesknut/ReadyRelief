@@ -1,0 +1,64 @@
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top" style="background-color:rgba(201, 134, 134, .9);">
+  <a class="navbar-brand" href="#" style="color:#f4e9cd;">
+     <img src="assets/img/ReadyRelief.png" width="30" height="30" class="d-inline-block align-top" alt="">
+     ReadyRelief
+   </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item active">
+        <a class="nav-link" routerLink="/home"><i class="fa fa-home"></i> Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" target="_blank" href="#logout" data-toggle = "modal" data-target= "#logout" data-backdrop="static" data-keyboard="false"><i class="fa fa-sign-out"></i> Logout</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<div class="modal fade" id="logout">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Logout successful.</h5>
+            </div>
+            <div class="modal-body">
+                <i class='fa fa-spinner fa-spin'></i> Redirecting you to the login screen...
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss = "modal" routerLink="/login">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+  <br>
+  <div class="jumbotron" style="padding-top:50px; background-color:#f4e9cd">
+    <div class="card">
+      <div class="card-body">
+        <form [formGroup]="submitForm" novalidate>
+          <!-- <h3 style="text-align:center;">Assistance Details</h3> -->
+          <div class="form-group">
+            <label>What disaster are you going through right now?</label>
+            <input type="text" class="form-control" formControlName="disaster" required autofocus/>
+            <div *ngIf="submitForm.controls.disaster.invalid && (submitForm.controls.disaster.dirty || submitForm.controls.disaster.touched)" class="alert alert-danger">
+              <div *ngIf="submitForm.controls.disaster.errors?.required">
+                Please fill in this field.
+              </div>
+            </div>
+            <br>
+            <div style="text-align:center;">
+              <h3>How can we help?</h3>
+              <button type="submit" class="btn btn-primary btn-lg prepare" style="display: inline-block;" routerLink="/prepare"><i class="fa fa-list-ul"></i> PREPARE</button>&nbsp;
+              <button type="submit" class="btn btn-primary btn-lg relief" routerLink="/relief"><i class="fa fa-medkit"></i> RELIEF</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,55 @@
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top" style="background-color:rgba(201, 134, 134, .9);">
+  <a class="navbar-brand" href="#" style="color:#f4e9cd;">
+     <img src="assets/img/ReadyRelief.png" width="30" height="30" class="d-inline-block align-top" alt="">
+     ReadyRelief
+   </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item active">
+        <a class="nav-link" routerLink="/home"><i class="fa fa-home"></i> Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" routerLink="/signup"><i class="fa fa-user-circle"></i> Sign Up</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" routerLink="/login"><i class="fa fa-sign-in"></i> Log In</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<div class="container">
+  <br>
+  <div class="jumbotron" style="padding-top:50px; background-image: url(assets/img/sandbags.jpg); background-size: cover; background-repeat: no-repeat; background-position: center center;">
+    <div class="card">
+      <div class="card-body">
+        <form [formGroup]="submitForm" (ngSubmit)="login()">
+          <h3 style="text-align:center;">Log In</h3>
+          <div class="form-group">
+            <label>Email<span class="require" title="This field is required.">*</span></label>
+            <input type="email" class="form-control" formControlName="email" required autofocus/>
+          </div>
+          <div class="form-group">
+            <label>Password<span class="require" title="This field is required.">*</span></label>
+            <input type="password" class="form-control" formControlName="password" required autofocus/>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">Log In</button>
+          <div *ngIf="validMessage != ''">
+            <br>
+            <h5 class="has-info"><i class='fa fa-spinner fa-spin'></i> {{validMessage}}</h5>
+          </div>
+          <div *ngIf="invalidMessage != ''">
+            <br>
+            <h5 class="has-info"><i class='fa fa-exclamation-triangle'></i> {{invalidMessage}}</h5>
+          </div>
+        </form>
+        <br><br>
+        <div class="text-center">Need an account? <a routerLink="/signup" style="text-decoration:underline;cursor:pointer;color:#966b9d;">Sign Up</a></div>
+      </div>
+    </div>
+  </div>
+</div>

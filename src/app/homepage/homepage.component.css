@@ -1,0 +1,10 @@
+.carousel-item img {
+  width: auto;
+  height: 700px;
+  max-height: 700px;
+}
+
+.jumbotron {
+  text-align: center;
+  background-color: transparent;
+}

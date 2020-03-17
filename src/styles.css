@@ -1,0 +1,65 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+.btn-primary, .btn-primary:hover {
+  background-color: #c98686;
+  border-color: transparent;
+}
+
+.btn-secondary, .btn-secondary:hover {
+  background-color: #966b9d;
+  border-color: transparent;
+}
+
+button.button {
+  color: #c98686;
+  border-color:transparent;
+  background-color:#f4e9cd;
+  border-radius: 12px;
+}
+
+button.button:hover {
+  color: #f4e9cd;
+  border-color:transparent;
+  background-color:#c98686;
+  border-radius: 12px;
+}
+
+.prepare, .prepare:hover {
+  background-color: #5c9ead;
+}
+
+.relief, .relief:hover {
+  background-color: #91c499;
+}
+
+.has-info {
+  text-align: center !important;
+}
+
+#mission {
+    display:none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#centered:hover #mission {
+    display:block;
+}
+
+#centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* [aria-expanded="true"] .fa:before {
+  content: "\f205" !important;
+}
+
+[aria-expanded="false"] .fa:before {
+  content: "\f204" !important;
+} */
