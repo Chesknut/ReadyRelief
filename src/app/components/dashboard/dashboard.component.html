@@ -1,0 +1,86 @@
+<!-- Top navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top" style="background-color:rgba(201, 134, 134, .9);">
+  <a class="navbar-brand" href="#" style="color:#f4e9cd;">
+     <img src="assets/img/ReadyRelief.png" width="30" height="30" class="d-inline-block align-top" alt="">
+     ReadyRelief
+   </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item active">
+        <a class="nav-link" routerLink="/prepare">Community Posts <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
+          <a class="nav-link" (click)="authService.SignOut()" target="_blank" href="#logout" data-toggle = "modal" data-target= "#logout" data-backdrop="static" data-keyboard="false">
+            <i class="fa fa-sign-out-alt"></i> Logout
+          </a>
+        <!-- <a class="nav-link" (click)="authService.SignOut()">
+          <i class="fas fa-sign-out-alt"></i> Logout
+        </a> -->
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Sidebar navigation -->
+<div class="container-fluid">
+  <div class="row">
+
+    <nav class="col-md-2 d-md-block bg-light sidebar">
+      <div class="sidebar-sticky">
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a class="nav-link active">
+              <i class="fas fa-user"></i>User Profile
+            </a>
+          </li>
+          <!-- Calling SignOut() Api from AuthService -->
+          <!--
+            <li style="padding:70px" class="nav-item">
+              <a class="nav-link" (click)="authService.SignOut()">
+                <i class="fas fa-sign-out-alt"></i>Log out
+              </a>
+            </li>
+          -->
+            <!-- <li class="nav-item active">
+            <a class="nav-link" (click)="authService.SignOut()">
+              <i class="fas fa-sign-out-alt"></i> Logout
+            </a>
+          </li> -->
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Main content -->
+    <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+      <div class="inner-adjust">
+
+        <div class="pt-3 pb-2 mb-3 border-bottom">
+          <h1 class="h2">User Profile</h1>
+        </div>
+        <!-- Show user data when logged in -->
+        <div class="row" *ngIf="authService.userData as user">
+          <div class="col-md-12">
+            <div class="media">
+              <img class="align-self-start mr-5 img-thumbnail rounded-circle" src="{{(user.photoURL) ? user.photoURL : '/assets/dummy-user.png'}}"
+                alt="{{user.displayName}}">
+              <div class="media-body">
+                <h1>Hey, <strong>{{(user.displayName) ? user.displayName : 'User'}}</strong></h1>
+                <h2>You're amazing!</h2>
+                <br>
+                <!-- <p>User ID: <strong>{{user.uid}}</strong></p> -->
+                <p>Email: <strong>{{user.email}}</strong></p>
+                <p>Email Verified: <strong>{{user.emailVerified}}</strong></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </main>
+
+  </div>
+</div>

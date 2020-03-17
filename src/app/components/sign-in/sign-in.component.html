@@ -1,0 +1,83 @@
+<!-- Original login component html -->
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top" style="background-color:rgba(201, 134, 134, .9);">
+  <a class="navbar-brand" href="#" style="color:#f4e9cd;">
+     <img src="assets/img/ReadyRelief.png" width="30" height="30" class="d-inline-block align-top" alt="">
+     ReadyRelief
+   </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item active">
+        <a class="nav-link" routerLink="/home"><i class="fa fa-home"></i> Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" routerLink="/signup"><i class="fa fa-user-circle"></i> Sign Up</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" routerLink="/login"><i class="fa fa-sign-in"></i> Log In</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+
+<!-- Original sign-in component html -->
+<div class="container">
+  <br>
+  <div class="jumbotron" style="padding-top:50px; background-image: url(assets/img/sandbags.jpg); background-size: cover; background-repeat: no-repeat; background-position: center center;">
+<div class="displayTable">
+  <div class="displayTableCell">
+
+    <div class="card">
+    <div class="card-body">
+
+    <div class="authBlock">
+      <h3 style="text-align:center;">Sign In</h3>
+      <div class="formGroup">
+        <label>Username<span class="require" title="This field is required.">*</span></label>
+        <input type="text" class="form-control" #userName required autofocus/>
+      </div>
+
+      <div class="formGroup">
+        <label style="margin-top: 10px">Password<span class="require" title="This field is required.">*</span></label>
+        <input type="password" class="form-control" #userPassword required autofocus/>
+        <br>
+      </div>
+
+      <!-- Calling SignIn Api from AuthService -->
+      <div class="formGroup">
+        <button type="button" class="btn btn-primary btn-block" (click)="authService.SignIn(userName.value, userPassword.value)">Log In</button>
+      </div>
+
+      <div class="formGroup">
+        <h4 style="text-align:center; margin: 15px; font-size: 25px;">Or</h4>
+        <!-- <span class="or"><span class="orInner">Or</span></span> -->
+      </div>
+
+      <!-- Calling GoogleAuth Api from AuthService -->
+      <div class="formGroup">
+        <button type="button" class="btn googleBtn btn-primary btn-block" (click)="authService.GoogleAuth()">
+          <i class="fab fa-google-plus-g"></i>
+          Log in with Google
+        </button>
+      </div>
+
+      <div class="forgotPassword">
+        <p style="margin-top: 15px">Forgot Password? <a routerLink="/forgot-password" style="text-decoration:underline;cursor:pointer;color:#966b9d;">Click here</a>
+      </div>
+    </div>
+
+    <div class="redirectToLogin">
+      <p style="margin-top: 5px">Need an account? <a routerLink="/register-user" style="text-decoration:underline;cursor:pointer;color:#966b9d;">Sign Up</a>
+    </div>
+
+  </div>
+</div>
+
+    </div>
+  </div>
+</div>
+</div>

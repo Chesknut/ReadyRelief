@@ -10,10 +10,12 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav ml-auto">
       <li class="nav-item active">
-        <a class="nav-link" routerLink="/relief"><i class="fa fa-home"></i> Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link" routerLink="/dashboard"><i class="fa fa-home"></i> Dashboard <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" target="_blank" href="#logout" data-toggle = "modal" data-target= "#logout" data-backdrop="static" data-keyboard="false"><i class="fa fa-sign-out"></i> Logout</a>
+        <a class="nav-link" (click)="authService.SignOut()" target="_blank" href="#logout" data-target= "#logout" data-backdrop="static" data-keyboard="false">
+          <i class="fa fa-sign-out-alt"></i> Logout
+        </a>
       </li>
     </ul>
   </div>
