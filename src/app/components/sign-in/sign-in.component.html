@@ -35,39 +35,43 @@
     <div class="card-body">
 
     <div class="authBlock">
-      <h3>Sign In</h3>
+      <h3 style="text-align:center;">Sign In</h3>
       <div class="formGroup">
-        <input type="text" class="formControl" placeholder="Username" #userName required>
+        <label>Username<span class="require" title="This field is required.">*</span></label>
+        <input type="text" class="form-control" #userName required autofocus/>
       </div>
 
       <div class="formGroup">
-        <input type="password" class="formControl" placeholder="Password" #userPassword required>
+        <label style="margin-top: 10px">Password<span class="require" title="This field is required.">*</span></label>
+        <input type="password" class="form-control" #userPassword required autofocus/>
+        <br>
       </div>
 
       <!-- Calling SignIn Api from AuthService -->
       <div class="formGroup">
-        <input type="button" class="btn btnPrimary" value="Log in" (click)="authService.SignIn(userName.value, userPassword.value)">
+        <button type="button" class="btn btn-primary btn-block" (click)="authService.SignIn(userName.value, userPassword.value)">Log In</button>
       </div>
 
       <div class="formGroup">
-        <span class="or"><span class="orInner">Or</span></span>
+        <h4 style="text-align:center; margin: 15px; font-size: 25px;">Or</h4>
+        <!-- <span class="or"><span class="orInner">Or</span></span> -->
       </div>
 
       <!-- Calling GoogleAuth Api from AuthService -->
       <div class="formGroup">
-        <button type="button" class="btn googleBtn" (click)="authService.GoogleAuth()">
+        <button type="button" class="btn googleBtn btn-primary btn-block" (click)="authService.GoogleAuth()">
           <i class="fab fa-google-plus-g"></i>
           Log in with Google
         </button>
       </div>
 
       <div class="forgotPassword">
-        <span routerLink="/forgot-password">Forgot Password?</span>
+        <p style="margin-top: 15px">Forgot Password? <a routerLink="/forgot-password" style="text-decoration:underline;cursor:pointer;color:#966b9d;">Click here</a>
       </div>
     </div>
 
     <div class="redirectToLogin">
-      <span>Don't have an account?<span class="redirect" routerLink="/register-user"> Sign Up</span></span>
+      <p style="margin-top: 5px">Need an account? <a routerLink="/register-user" style="text-decoration:underline;cursor:pointer;color:#966b9d;">Sign Up</a>
     </div>
 
   </div>

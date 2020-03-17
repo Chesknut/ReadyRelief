@@ -4,3 +4,8 @@
   max-width: 26rem;
   background-color: white;
 }
+
+.require {
+  color: #E42434;
+  cursor: help;
+}
