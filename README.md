@@ -31,6 +31,3 @@ Our front-end ended up looking AMAZING thanks again to our super talented front-
 
 ## What we learned
 We learned a lot about Microsoft Azure Services, especially how to implement it in existing web applications. I personally learned that I honestly shouldn't spend way too much time researching which technologies or approaches might be best to use - sometimes (especially this time) it's much better to just pick something and run with it until you run into problems with it later, rather than wasting too much time researching, finally picking something, and then also still spending a lot of time on problems that I run into later without being able to make any progress haha.
-
-## What's next for ReadyRelief
-We would really like to incorporate a non-relational database using a cloud service such as Azure to store user posts and information. One feature we also really wanted to add was a map API that displayed nearby locations of shelters and food distribution centers to further assist those in dire need after a natural disaster.
